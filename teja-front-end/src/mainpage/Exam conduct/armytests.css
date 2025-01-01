@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2, h3 {
+    margin-top: 1em;
+  }
+  
+  ol {
+    list-style-type: decimal;
+    margin-left: 2em;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 2em;
+  }
+  
+  li {
+    margin-bottom: 0.5em;
+  }
+  
+  .question-status {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .question-status li {
+    margin-bottom: 0.2em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .question-status li::before {
+    content: " ";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
+    border-radius: 50%;
+  }
+  
+  .not-visited::before {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+  }
+  
+  .not-answered::before {
+    background-color: #ff0000;
+  }
+  
+  .answered::before {
+    background-color: #00ff00;
+  }
+  
+  .not-answered-marked::before {
+    background-color: #ffff00;
+  }
+  
+  .answered-marked::before {
+    background-color: #00ffff;
+  }
+  
+  .highlight {
+    font-weight: bold;
+  }

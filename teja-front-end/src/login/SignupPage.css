@@ -1,0 +1,118 @@
+
+.Main-container {
+  height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     height: 100vh;
+    background: linear-gradient(135deg,  rgb(218, 218, 218), hsl(211, 100%, 50%));
+    /* background-color: white; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .box {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    width: 400px;
+
+    /* background: linear-gradient(135deg,  rgb(255, 255, 255), hsl(211, 100%, 85%)); */
+  }
+
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .input-itm {
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-itm label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input-itm input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: hsl(211, 100%, 50%);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: rgb(0, 86, 179);
+  }
+  
+  
+  .toggle-text {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .toggle-text span {
+    color: hsl(211, 100%, 50%);
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .toggle-text span:hover {
+    text-decoration: underline;
+  }
+.Main-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.box {
+  animation: slideUp 0.8s ease-out;
+}
+
+.background-video {
+  animation: scaleIn 2s ease-in-out;
+}
+
+.submit-btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+.toggle-text span {
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.toggle-text span:hover {
+  color: hsl(211, 100%, 35%);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  0% { transform: scale(1.1); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

@@ -1,0 +1,92 @@
+
+.Armykjsdkc{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color:#f0f0f0;
+}
+.starttheexam{
+  color: white;
+}
+.Armycontainer {
+    width: 80%;
+    height: fit-content; 
+    /* border: 2px solid black; */
+    padding: 2%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: start;
+    flex-direction: column;
+    font-size: larger;
+    scrollbar-width:none;
+    /* border: 2px solid #007bff ; */
+    background-color:white;
+    
+  }
+  .Armycontainerh2{
+    width: 100%;
+    height: fit-content;
+    background-color: #007bff;
+    color: white;
+  }
+  .flex-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .checkbox-container {
+    display: flex;
+  }
+  
+  .checkbox {
+    width: 20px;
+  }
+  
+  button {
+    /* background-color: green; */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  button h3 {
+    margin: 0;
+  }
+  
+  .question-status li {
+    list-style-type: none;
+  }
+  
+  .not-visited {
+    color: gray;
+  }
+  
+  .not-answered {
+    color: red;
+  }
+  
+  .answered {
+    color: green;
+  }
+  
+  .not-answered-marked {
+    color: orange;
+  }
+  
+  .answered-marked {
+    color: blue;
+  }
+  
+  .highlight {
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  

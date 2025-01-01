@@ -1,0 +1,418 @@
+
+body ,.main
+{
+    width:100%;
+    height: 100svh;
+    background-color:skyblue;
+   
+
+  
+
+}
+.main{
+    display: flex;
+}
+.keyconcepts
+{
+    width:30%;
+    height:100svh;
+    border:2px solid black;
+    display:flex;
+    justify-content: end;
+    list-style-type: none;
+    padding:0;
+    margin:0;
+
+}
+.main_content
+{
+  width:70%;
+  height: 100svh;
+  border:2px solid black;
+  background-color:grey;
+  overflow: scroll;
+}
+.main_content::-webkit-scrollbar
+{
+  display:none;
+}
+.content{
+    width:90%;
+    height: 40%;
+    /* border:1px solid black; */
+    /* text-align: center; */
+    font-size:32px;
+}
+/* Main Container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Takes up full height of the viewport */
+  justify-content: space-between; /* Ensures proper spacing between content */
+  background-color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Eligibility Container */
+.eligibility-container {
+  width: 70%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Header */
+.eligibility-header h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Button Grid */
+.choose {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Auto-fill layout */
+  gap: 20px; /* Space between buttons */
+}
+
+/* Button Style */
+.item a {
+  display: block;
+  padding: 15px 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.item a:hover {
+  background-color: #0056b3;
+  transform: translateY(-5px);
+}
+
+/* Specific Button Colors */
+.ssc { background-color: #28a745; }
+.ssc:hover { background-color: #218838; }
+
+.navy { background-color: #17a2b8; }
+.navy:hover { background-color: #117a8b; }
+
+.army { background-color: #ffc107; }
+.army:hover { background-color: #e0a800; }
+
+.airforce { background-color: #dc3545; }
+.airforce:hover { background-color: #c82333; }
+
+.railway { background-color: #6c757d; }
+.railway:hover { background-color: #5a6268; }
+
+/* Footer Section */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.footer-link {
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .eligibility-container {
+      width: 90%;
+  }
+
+  .choose {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust for smaller screens */
+  }
+}
+
+  /* .eachone
+  {
+    margin: 10px;
+    width: 70%;
+    height: 70svh;
+    background-color: grey;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: background-color 0.25s;
+    border:2px  solid black;
+    display: none;
+  } */
+
+.exam-details-unique {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #1f4037, #99f2c8);
+  padding: 50px 20px;
+  border-radius: 15px;
+  color: white;
+  margin-top: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Roboto', sans-serif;
+}
+ 
+.unique-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom:15px;
+}
+
+.unique-header h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.mainhead
+{
+  display: flex;
+  justify-content:start;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 32px;
+  margin-bottom:20px;
+  color:rgb(36, 28, 28);
+}
+ 
+.exam-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 100%;
+  margin-top: 10px;
+
+}
+
+.content-left {
+  flex-basis: 48%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  width:50%;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  height: fit-content;
+  width: fit-content;
+
+
+}
+
+.content-left:hover
+{
+  transform: translateY(-2px);
+}
+.eachjob
+{
+  height: auto;
+  /* border:1px solid black; */
+  width:100%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+
+}
+.jobheading
+{
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0);
+   height: 20px;
+   width:fit-content;
+   padding:10px;
+   margin:10px;
+   font-size: 36px;
+   border-radius: 10px;
+   /* color:black */
+}
+.classes
+{
+  font-size: 28px;
+  width:100%;
+  height: auto;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content:space-around;
+  /* border:1px solid black; */
+  row-gap: 30px;
+  column-gap: 50px;
+  margin-left: 20px;
+}
+.ten,.inter,.graduation
+{
+  width:25%;
+  height: auto;
+  padding:20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  cursor:pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.everyjob
+{
+  width:100%;
+  height:auto;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-top:20px;
+  padding:20px;
+  
+  /* display: none; */
+  /* border:2px solid red */
+
+}
+.jobname{
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  height:fit-content;
+  width:70%;
+  margin:1px;
+  padding:2px;
+  /* border:1px solid black; */
+  border-radius: 10px;
+}
+.tclose
+{
+  display:flex;
+  justify-content: end;
+  align-items: center;
+  padding: 5px;
+  width:100%;
+}
+.close
+{
+  /* background-color: rgb(247, 80, 80); */
+  width:fit-content;
+  height: fit-content;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  border-radius: 20%;
+  cursor: pointer;
+  color:black;
+  font-size: 24px;
+  
+}
+.close:hover{
+  color:red;
+  /* background-color:white; */
+}
+.eachsubject
+{
+  width:fit-content;
+  height:fit-content;
+  font-size: 26px;
+  margin-top: 20px;
+  padding:5px;
+  /* color:rgb(71, 68, 68); */
+}
+.everyjob_syllabus
+{
+  width:fit-content;
+  height: fit-content;
+  border:1px solid black;
+}
+.stream-container {
+  margin-top: 20px;
+}
+
+.stream-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stream-item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.stream-button {
+  padding: 10px 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.stream-button:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(66, 49, 49, 0.1);
+}
+/* General button styles */
+button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Cross button for back navigation */
+.cross-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  background: transparent;
+  color: #0c0c0c;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  /* background-color: red; */
+}
+
+.cross-button:hover {
+  color: #d84315;
+}
+ 
+
+
+ 

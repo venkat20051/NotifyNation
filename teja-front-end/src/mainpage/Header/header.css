@@ -1,0 +1,216 @@
+.Headernames {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--rootheaderbarcolor); /* Updated background color */
+    padding: 0 20px;
+    /* box-shadow: 0 2px 4px rgba(110, 17, 17, 0.1); */
+}
+
+.account  {
+    background-color: transparent;
+    /* padding-right: 40px; */
+    width: fit-content;
+    /* height: 40px; */
+    border-radius: 50%;
+    color:white;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.logo {
+    width: 250px;
+    height: 50px;
+    color: #ECF0F1;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.anima{
+    color: red;
+}
+
+.nav-links {
+    height: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content:center;
+    align-items: center;
+    width:100%
+}
+
+.nav-link {
+    color: #ECF0F1;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    background-color:rgb(11, 54, 185); /* Hover background effect */
+    border-radius: 6px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.accounttttt{
+    color: white;
+    text-decoration: none;
+}
+.nav-link.active {
+   padding: 1%;
+   border-radius: 10px;
+
+    color: black;
+    /* border-bottom: 3px solid #1e1a73; Add border-bottom on active */
+    background-color: var(--rootheaderhoveringeffort); /* Remove background color */
+    /* border-radius: 0; Remove border radius for a clean bottom-border look */
+}
+
+.Notify {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover .Notify {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.Notify a {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    transition: background-color 0.2s;
+}
+
+.Notify a:hover {
+    background-color: var(--rootheaderhoveringeffort);
+    color:white;
+    padding-left: 10px;
+    transition: background-color 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+}
+.nav-link{
+    text-transform: uppercase;
+}
+.menu, .closeee {
+    display: none;
+}
+
+.close svg path{
+    display: none;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 950px) {
+    .nav-links {
+        width: 300px;
+        height: 500px;
+        display: none;
+        flex-direction: column;
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 0;
+        right: -300px;
+        transition: all 10s;
+        
+       
+    }
+    .account a{
+        display: none;
+    text-decoration: none;
+
+        
+        padding-right: 0;
+    }
+    .account a{
+        text-decoration: none;
+    }
+   .account, .nav-link{
+
+        font-size: large;
+        color: black;
+    }
+    .nav-link.active{
+        width:100%;
+        height: 30px;
+        text-align: center;
+        border-bottom: none;
+        font-size: xx-larger;
+        font-weight: 600;
+        /* background-color: rgb(27,27,27,.5); */
+    }
+    .accounttttt{
+        color:black;
+        font-size: larger;
+        text-decoration: none;
+    }
+    .accounttttt a{
+        text-decoration: none;
+    }
+    .logo{
+        font-size: medium;
+    }
+
+    .nav-links.open {
+        display: flex;
+        right: 0;
+    }
+
+    .menu, .closeee {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    .menu {
+        color: white;
+    }
+
+    .close {
+        color: #ECF0F1;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    .Notify{
+        display: none;
+    }
+    .Headernames{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .menu{
+        padding-right: 30px;
+    }
+    
+}

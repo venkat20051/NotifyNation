@@ -1,0 +1,303 @@
+
+.quiz_container{
+    width: 100%;
+     height: 100svh;
+     /* border: 2px solid black; */
+     display: flex;
+   
+
+}
+.marked_questions{
+    display: none;
+}
+.quiz_container::-webkit-scrollbar {
+    display: none;
+  }
+.options input {
+    width: 20px;
+    height: 20px;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.quiztejaheader{
+    text-transform: uppercase;
+    width: 100%;
+    height: 50px;
+    background-color: #0056b3;
+    color: white;
+    margin-top: 0;
+}
+.question_and_option{
+    width: 100%;
+    height: 90%;
+}
+.Prev_next_markasreview_clear {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 2px solid; */
+    /* background-color: lightgreen; */
+}   
+.venkatbutton12{
+    width: 180px;
+}
+
+.question_container_left {
+    width: 70%;
+    height:auto;
+    /* border: 2px solid red; */
+justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    /* padding: 2%; */
+    font-size: xx-large;
+    background-color: #ffffff;
+    
+}
+.question_containerrrrrr{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    /* padding: 2%; */
+    /* border: 2px solid; */
+    
+
+}
+
+.option_container  {
+    width: 30%;
+    height: 100%;
+   /* border: 2px solid black; */
+    display: flex;
+    flex-direction : column;
+    background-color: aliceblue;
+    
+}
+
+.timer {
+    width: 100%;
+    height: fit-content;
+    /* background-color: aqua; */
+    font-size: 100%;
+    /* text-align: center; */
+    line-height: 50px;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_buttons {
+    width: 100%;
+    height: fit-content;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section_options{
+    height:80.5% ;
+    width: 100%;
+  /* border: 2px solid yellow; */
+  /* background-color: rgb(231, 231, 13); */
+    padding: 2%;
+ 
+}
+.section_options button{
+    width: 50px ;
+    height: 50px;
+    margin: 1%;
+}
+
+.buttons {
+    /* Optional border for visualization */
+    /* border: 3px solid orange; */
+    display: flex;
+    flex-wrap: wrap;
+    /* 2 rows */
+    gap: 10px;
+    padding: 2%;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button {
+    width:200px  
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .buttons {
+        grid-template-columns: 1fr; /* Single column on tablets and smaller screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .buttons {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
+    }
+}
+@media(max-width: 850px){
+    .quiz_container{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        padding-bottom: 20px;
+    }
+    .question_container_left{
+        width: 100%;
+        height: 100svh;
+    }
+    .option_container{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .Prev_next_markasreview_clear{
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+         row-gap: 10px;
+    }
+    .venkatbutton{
+        width: 150px;
+    }
+   
+    .section_options {
+        width: 100%;
+        /* margin-top: 20px; */
+        /* background-color: #45a049; */
+        overflow-y: hidden; /* Hide vertical scrolling by default */
+        overflow-x: hidden; /* Hide horizontal scrolling by default */
+        scrollbar-width: none; /* For Firefox */
+    }
+    
+    .section_options::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Edge */
+    }
+    
+    .section_options button {
+        max-width: 800px; /* Adjust button width as needed */
+        height: 50px;
+        font-size: x-large;
+        /* margin: 5px; */
+    }
+    .quiztejaheader{
+        display: inline;
+      justify-content: center;
+      align-items: center;      
+        font-size: xx-large;
+        padding-top: 10px;
+    }
+    
+    /* Default grid for larger screens */
+    .section_options {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+        gap: 10px;
+    }
+    
+    /* Responsive design for screens 400px or smaller */
+    @media (max-width: 400px) {
+        .section_options {
+            display: flex;
+            flex-wrap: nowrap; /* Prevent wrapping, enabling horizontal scrolling */
+            overflow-x: auto; /* Enable horizontal scrolling */
+            overflow-y: hidden; /* Disable vertical scrolling */
+        }
+    }
+    
+    .section_buttons{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+    
+
+}
+@media (max-width: 400px){
+    .buttons{
+        width: 100%;
+        display: flex;
+    flex-wrap: wrap; /* Three columns on larger screens */
+        /* display: none; */
+        /* grid-template-columns:repeat(2, 1fr);  */
+
+}
+.question_containerrrrrr{
+    font-size:30px;
+}
+.buttons button{
+    width: 170px;
+}
+
+}
+
+
+
+
+/* Styles for section buttons */
+.buttons button {
+    padding: 10px;
+    border-radius: 5px;
+    
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+} 
+.section_options button.active {
+    background-color: #0056b3;
+    border: 2px solid blue;
+  }
+  .maths_section, .science_section, .english_section, .general_warenes_section{
+    width: 100%;
+}
+
+/* quiz.css */
+
+.active {
+    background-color: blue; /* Highlight for the currently selected question */
+  }
+  
+  .green {
+    background-color: green; /* Question answered */
+  }
+  
+  .yellow {
+    background-color: yellow /* Question marked for review */
+  }
+  
+  .default {
+    background-color: lightgray; /* Default state */
+  }
+  
+  
+
+
+  .quiz_container::-webkit-scrollbar, 
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+      display: none;
+  }
+
+ 
+

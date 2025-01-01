@@ -1,0 +1,121 @@
+/* Styling for individual exam buttons */
+
+.exam-btn {
+  background-color: var(--rootallButtons); /* Main button color */
+  color: white;
+  border: none;
+  padding: 12px 16px; /* Increased padding for a better look */
+  border-radius: 6px; /* Slightly more rounded corners */
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  width: 100%; /* Full width for consistency */
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2); /* Soft shadow for depth */
+}
+
+.exam-btn a {
+  color: white;
+  text-decoration: none; /* Remove underline */
+}
+
+.exam-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 6px 8px rgba(0, 86, 179, 0.3); /* Deeper shadow on hover */
+}
+
+/* Grid layout for the exam buttons */
+.exam-button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 12px; /* Increased spacing between buttons */
+  padding: 20px;
+}
+
+/* Container styles */
+.containerquestion {
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
+  border-radius: 10px;
+  max-width: 1200px; /* Restrict the container width */
+  text-align: center;
+}
+
+/* Responsive grid for smaller devices */
+@media (max-width: 768px) {
+  .exam-button-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    gap: 10px;
+  }
+
+  .exam-btn {
+    padding: 10px 12px; /* Adjust padding */
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .exam-button-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 12px;
+  }
+
+  .exam-btn {
+    padding: 8px 10px; /* Smaller padding for mobile */
+    font-size: 14px; /* Decrease font size */
+  }
+}
+
+/* Additional styles for question and options */
+.questionbox {
+  width: 100%;
+  font-size: 18px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  line-height: 1.6;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.opt {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  column-gap: 20px;
+  row-gap: 12px;
+  margin-left: 10px;
+}
+
+#ans {
+  color: green;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .opt {
+    width: 90%; /* Reduce width */
+    margin-left: 5%;
+    grid-template-columns: 1fr; /* Single column */
+  }
+
+  .questionbox {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .opt {
+    width: 100%;
+    margin-left: 10%;
+  }
+
+  .questionbox {
+    font-size: 14px;
+  }
+}

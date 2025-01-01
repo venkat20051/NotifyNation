@@ -1,0 +1,37 @@
+
+
+
+
+@media only screen and (max-width:950px){
+    .clicked{
+        font-size:larger ;
+    }
+}
+
+/* latest notification css */
+.ve_Notification{
+    display: flex;
+    font-size: 18px;
+    padding: 5px 5px;
+}
+.Notifications_data .ve_Notification:nth-child(even) {
+    background-color: rgb(171, 167, 167);
+}
+.Notifications_data .ve_Notification:nth-child(odd) {
+    background-color:aliceblue;
+}
+.ve_data{
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width:90%;
+}
+.ve_more{
+    font-weight: 600;
+    text-decoration: underline;
+    color: rgb(42, 56, 62);
+    width: 10%;
+}
+.ve_more:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.hall-ticket-container {
+    width: 70%;
+    margin: 30px auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hall-ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.session-info {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.exam-info h2 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.ticket-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.personal-info, .exam-info, .center-info {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.ticket-details h2 {
+    text-align: center;
+    color: #4caf50;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Important Information Section */
+.important-info {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.important-info h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.important-info ul {
+    padding-left: 20px;
+}
+
+.important-info ul li {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Footer */
+.hall-ticket-footer {
+    border-top: 1px solid #d9d9d9;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.signature {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}

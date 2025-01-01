@@ -1,0 +1,126 @@
+/* Search Styles for Admit Card */
+.search1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+input[type='search'] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+.containerrrr{
+    display: grid;
+    flex-direction: column;
+grid-template-columns: repeat(auto-fill, 35rem);
+justify-content: space-evenly;
+/* gap: 20px; */
+flex-wrap: wrap;
+}
+/* Admit Card Styles */
+.admit-card {
+    height: fit-content;
+    display: flex;
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    flex-direction: column;
+    border-left: 4px solid #007bff; /* Retained blue border */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Background color transition */
+}
+
+.admit-card:hover {
+    transform: translateY(-3px);
+    background-color: rgba(173, 216, 230, 0.4); /* Light blue background on hover */
+}
+
+/* Admit Card Header */
+.admit-card h3 {
+    font-size: 1.4rem;
+    color: #007bff; /* Retained blue */
+    margin-bottom: 5px;
+}
+
+/* Admit Card Details */
+.admit-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* Admit Card Button Styles */
+.download-btn {
+    width: fit-content;
+    background-color: #007bff; /* Retained blue */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition effects */
+}
+
+.download-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+.chandudebba{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+/* Notification Card Styles */
+.notification-card {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.notification-card:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search1 {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .containerrrr{
+        display: grid;
+        flex-direction: column;
+    grid-template-columns: repeat(auto-fill, 20rem);
+    justify-content: space-evenly;
+    /* gap: 20px; */
+    flex-wrap: wrap;
+    }
+    input[type='search'] {
+        width: 100%; /* Full width on smaller screens */
+        margin-top: 10px; /* Margin for spacing */
+    }
+
+    .admit-card {
+        padding: 10px; 
+    }
+    .chandudebba2{
+        /* width: 100%; */
+    }
+    .admit-card{
+        width: 330px;
+    }
+}

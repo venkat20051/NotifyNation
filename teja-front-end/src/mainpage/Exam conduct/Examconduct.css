@@ -1,0 +1,130 @@
+.total_main {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    gap: 8px;
+    background-color: #F8F9FA;
+    position: relative;
+}
+.venkatpani h3{
+    font-size: x-large;
+    color: white;
+    background-color: transparent;
+}
+.main_head {
+    width: 100%;
+    height: 50px;
+    background-color: #2C3E50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.main_body {
+    width: 100%;
+    height: calc(100vh - 10px);
+    display: flex;
+    gap: 5px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.life_side {
+    width: 20%;
+    height: 100%;
+    border: 1px solid #B2B2B2;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    overflow-y: auto;
+    position: relative;
+    display: none;
+}
+
+.life_side a {
+    width: 80%;
+    margin: 10px 0;
+}
+
+.life_side div {
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    color: white;
+    font-weight: 500;
+}
+.life_side{
+    text-transform: uppercase;
+}
+.life_side a.active div,
+.life_side div:hover {
+    background-color: var(--rootheaderhoveringeffort);
+    color: #FFFFFF;
+}
+
+.right_side {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid #B2B2B2;
+    background-color: var(--rootbackgroundcolor);
+    padding: 20px;
+    overflow-y: auto;
+    position: relative;
+    animation: teja 1s linear;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 950px) {
+    .life_side {
+        display: block;
+        width: 100%;
+        height: 30px;
+        /* border: 2px solid black; */
+        overflow-y: scroll;
+        white-space: nowrap;
+        position: fixed;
+        top: 65px;
+        z-index: 3;
+        display: flex;
+        flex-direction: row;
+        background-color: #007bff;
+        
+        
+        
+    }
+   
+    
+    .life_side::-webkit-scrollbar{
+        display: none;
+    }
+
+    .life_side div {
+        display: inline-block;
+        margin-right: 10px;
+        width: auto;
+        
+    }
+
+    .right_side {
+        width: 100%;
+        height: calc(100vh - 95px);
+        position: relative;
+        top: 5%;
+        overflow-y: auto;
+        padding-bottom: 20px;
+    }
+}

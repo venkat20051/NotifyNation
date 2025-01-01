@@ -1,0 +1,111 @@
+.ve_getData {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+  
+  .ve_post_title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+  }
+  
+  .ve_post_details {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .ve_post_name {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .ve_post_date, .ve_post_update, .ve_post_vacncy {
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  .ve_basic_information {
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  
+  .ve_info {
+    color: #007bff;
+  }
+  
+  .ve_application_fee, .ve_important_dates, .ve_age_limit {
+    margin: 20px 0;
+  }
+  
+  .ve_application_fee ul,
+  .ve_important_dates ul,
+  .ve_age_limit ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .ve_application_fee li,
+  .ve_important_dates li,
+  .ve_age_limit li {
+    background: #e7f3ff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .ve_application_fee li:hover,
+  .ve_important_dates li:hover,
+  .ve_age_limt li:hover {
+    background: #d1e6ff;
+  }
+  
+  .ve_apply_pdf {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .ve_apply,
+  .ve_pdf {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .ve_apply:hover,
+  .ve_pdf:hover {
+    background-color: #0056b3;
+  }
+  
+  .ve_apply {
+    /* flex: 1; */
+    margin-right: 10px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .ve_apply a{
+    text-decoration: none;
+    color:white;
+  }
+  
+  .ve_pdf {
+    /* flex: 1; */
+    margin-left: 10px;
+    text-align: center;
+  }

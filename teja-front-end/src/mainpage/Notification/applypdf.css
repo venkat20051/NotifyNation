@@ -1,0 +1,277 @@
+.fullForm{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid; */
+}
+.declaration,.documentDetails,.applicationDetails,.personaldetails121,.addressdetails121,.education-item, .educationDetails{
+  border: 1.2px solid ;
+}
+.applicationForm122{
+  width: 100% !important;
+  /* margin: 20px auto;
+  padding: 20px; */
+  /* width:100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  /* border: 1px solid; */
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+}
+
+
+.heading_of_job122{ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top:50px;
+  margin-bottom: 20px;
+  color: #007bff;
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.headings_in img {
+  width: fit-content;
+  height: auto;
+}
+
+.headings_in_matter h2 {
+  font-size: 24px;
+  width: fit-content;
+  text-align: center;
+  /* flex-grow: 1; */
+}
+
+.personaldetails121{
+  display: flex;
+}
+
+.applicationDetails,
+.personaldetails121,
+.addressdetails121,
+.educationDetails,
+.documentDetails {
+  /* margin-bottom: 20px; */
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+  padding: 15px;
+  background: #fafafa;
+}
+.perement_address{
+  width: 100%;
+}
+.correspondence_address{
+  width: 100%;
+}
+.address_head{
+  font-size: 20px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+.details-flex {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 15px;  */
+}
+.ve_post_head1223{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+
+.detail-item {
+  flex: 1 1 calc(50% - 10px); 
+  background: #fff;
+  /* padding: 10px; */
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+  width: 100%;
+}
+
+h3 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+
+.education-item,
+.document-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+  background: #fff;
+}
+
+.declaration ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.declaration li {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+@media (max-width: 600px) {
+  .applicationForm {
+    /* padding: 10px; */
+    width: 100%;
+  }
+
+  .heading_of_job122 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headings_in img {
+    width: 40px;
+  }
+
+  .headings_in_matter h2 {
+    font-size: 20px;
+    /* margin: 10px 0; */
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .detail-item {
+    flex: 1 1 100%; 
+  }
+}
+.applicationForm {
+  max-width: 800px;
+  /* margin: 20px auto; */
+  /* padding: 20px; */
+  background: #fff;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+}
+
+h3 {
+  /* margin-bottom: 15px; */
+  color: #007bff;
+}
+
+.inner_10th_data{
+  margin-top: 2px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.personaldetails121 {
+  display: flex;
+  flex-wrap: wrap; 
+  /* gap: 15px;  */
+}
+.inner_persoanl_details{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  flex: 1 1 calc(45% - 10px); 
+  background: #fff;
+  padding: 7px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+@media (max-width: 600px) {
+  img{
+    display: none;
+  }
+  .detail-item {
+    flex: 1 1 100%;
+  }
+  .inner_10th_data{
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+}
+.document-table {
+  width: 100%;
+  border-collapse: collapse; 
+  margin-top: 15px; 
+}
+
+.document-table th,
+.document-table td {
+  border: 1px solid #ddd; 
+  padding: 10px; 
+  text-align: left;
+}
+
+.document-table th {
+  background-color: #f2f2f2; 
+  color: #333; }
+
+.document-table tr:nth-child(even) {
+  background-color: #f9f9f9; 
+}
+
+.document-table tr:hover {
+  background-color: #f1f1f1; 
+}
+
+.applicationDetails, .personaldetails121, .addressdetails121, .educationDetails, .documentDetails, .declaration {
+  page-break-inside: avoid;
+}
+.page-break {
+  page-break-before: always;
+  break-before: page;
+}
+
+.fullForm {
+  padding: 20px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .fullForm {
+    font-size: 0.8rem; /* Reduce font size for smaller screens */
+    padding: 10px;
+  }
+  .detail-item, .education-item {
+    display: block; /* Ensure single-column layout on small screens */
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+  .inner_10th_data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add spacing for better readability */
+  }
+}

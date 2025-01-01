@@ -1,0 +1,272 @@
+
+/* Responsive Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  /* margin: 50px auto; */
+  padding: 20px;
+  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.click{
+  text-decoration: none;
+}
+
+/* Header Styling */
+.header_admitcard {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Admit Card Styling */
+.admit-card {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  /* height: fit-content; */
+}
+
+.admit-card:last-child {
+  border-bottom: none;
+}
+
+.admit-card h3 {
+  color: var(--rootallButtons);
+}
+
+.admit-card p {
+  color: #888;
+}
+.ch_full{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-btn {
+  
+  background-color: var(--rootallButtons);
+  color:white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+ 
+  /* width: 100px; */
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+  /* color:white ; */
+}
+.chandudebba{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+/* Admit Form Styling */
+.AdmitForm {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  font-size: 20px;
+}
+.AdmitForm1 {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  font-size: 20px;
+}
+
+.container1 {
+  width: 60%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.AdmitForm label {
+  color: #555;
+}
+
+.AdmitForm input {
+  border: 1.5px solid black;
+  width: 90%;
+  height: 28px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.download-btn1 {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100px;
+}
+
+/* Announcement Section Styling */
+.Announcement_main {
+  display: flex;
+  width: 100%;
+  height: 100svh;
+  justify-content:space-between;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+.Announcement_left {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  row-gap: 20px;
+  /* padding-top: 55px; */
+  /* margin-top: 20px; */
+  /* border: 2px solid black; */
+}
+
+.Announcement_right {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  /* border: 2px solid black; */
+}
+
+.Announcement_right::-webkit-scrollbar {
+  display: none;
+}
+.qst{
+  font-weight: 900;
+}
+/* Responsive Media Queries */
+
+/* For Tablets */
+@media (max-width: 768px) {
+  .admit-card, .Announcement_main {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  .admit-card{
+    /* height: 200px; */
+    /* height: 30%; */
+    row-gap: 10px;
+  }
+
+  .download-btn, .download-btn1 {
+      margin-top: 10px;
+      width: fit-content;
+  }
+  .download-btn1{
+    padding:10px;
+    /* width: fit-content; */
+  }
+
+  .AdmitForm {
+      width: 90%;
+      font-size: 18px;
+  }
+  .AdmitForm1{
+      width: 90%;
+      font-size: 18px;
+  }
+
+  .container, .container1 {
+      width: 100%;
+      /* height: fit-content; */
+  }
+
+  .Announcement_left {
+      width: 100%;
+      font-size: 20px;
+      padding-left: 20px;
+  }
+.bar{
+  width: fit-content;
+}
+  .Announcement_right {
+      width: 100%;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+  .admit-card, .Announcement_main {
+      flex-direction: column;
+      align-items: flex-start;
+      /* column-gap: 10px; */
+  }
+
+  .download-btn, .download-btn1 {
+      /* width: fi/; */
+      /* margin-top: 10px; */
+      padding: 6px 6px;
+  }
+
+  .AdmitForm {
+      width: 100%;
+      font-size: 16px;
+  }
+
+  .container, .container1 {
+      width: 100%;
+      margin: 20px auto;
+      padding: 15px;
+      /* height: fit-content; */
+  }
+  .container{
+    /* height: 100px;  */
+    display: flex;
+    flex-direction: column;
+    /* height: 200px; */
+  }
+
+  .header_admitcard {
+      font-size: 24px;
+  }
+  .admit-card{
+    /* height: 130px; */
+    /* column-gap: 10px; */
+  }
+
+  .admit-card h3, .admit-card p {
+      font-size: 15px;
+  }
+
+  .Announcement_left {
+      font-size: 18px;
+      row-gap: 5px;
+  }
+
+  .Announcement_right {
+      font-size: 16px;
+      width: 100%;
+  }
+}
+.halltickethead{
+  background-color: #007bff;
+  color: white;
+  width: 90%;
+  height: fit-content;
+  padding: 10px;
+
+}

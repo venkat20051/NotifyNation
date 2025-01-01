@@ -1,0 +1,113 @@
+/* Container for the Bank component */
+.bank-container {
+    padding: 20px;
+    background-color: #F0F4F8; /* Light Gray-Blue background */
+}
+
+/* Styling for the search bar container */
+.bank-search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for the heading of the search bar */
+.bank-search-container h3 {
+    font-size: 1.8rem;
+    color: #2C3E50; /* Dark Blue */
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase for military effect */
+}
+
+/* Styling for the search input */
+.bank-search-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #2C3E50; /* Dark Blue border */
+    width: 300px;
+    transition: border-color 0.3s;
+}
+
+/* Change border color on focus */
+.bank-search-input:focus {
+    border-color: #1ABC9C; /* Teal on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Container for the exam cards */
+.bank-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+}
+
+/* Individual card styling */
+.bank-card {
+    background-color: #ECF0F1; /* Light Gray */
+    border: 2px solid #2C3E50; /* Dark Blue border */
+    border-radius: 5px;
+    width: 300px; /* Fixed width for cards */
+    overflow: hidden; /* Prevent overflow for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+    transition: transform 0.3s; /* Scale on hover */
+}
+
+/* Scale effect on hover */
+.bank-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Header section of the card */
+.bank-card-header {
+    background-color: #1ABC9C; /* Teal */
+    color: #FFF; /* White text */
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* Badge for the exam type */
+.bank-badge {
+    background-color: #E74C3C; /* Red */
+    color: #FFF; /* White text */
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 10px;
+    font-weight: bold; /* Bold badge text */
+}
+
+/* Title of the exam */
+.bank-exam-title {
+    font-weight: bold;
+}
+
+/* Body of the card containing exam details */
+.bank-card-body {
+    padding: 10px;
+    font-size: 0.9rem; /* Slightly smaller font size */
+    color: #34495E; /* Dark Gray */
+}
+
+/* Footer section of the card */
+.bank-card-footer {
+    padding: 10px;
+    text-align: center; /* Center align the button */
+}
+
+/* Styling for the test button */
+.bank-test-button {
+    background-color: #2C3E50; /* Dark Blue */
+    color: #ECF0F1; /* Light Gray */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Background color and scale on hover */
+}
+
+/* Change button background color on hover */
+.bank-test-button:hover {
+    background-color: #1ABC9C; /* Teal */
+    transform: scale(1.05); /* Slight scale on hover */
+}

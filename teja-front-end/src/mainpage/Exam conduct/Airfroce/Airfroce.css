@@ -1,0 +1,74 @@
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-container h3 {
+    font-size: 1.5rem;
+    color: #2C3E50; /* Dark Blue */
+}
+
+.search-container input[type='search'] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #BDC3C7; /* Light Gray */
+    width: 300px;
+}
+
+.airforce-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+article {
+    background-color: #ECF0F1; /* Light Gray */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.card-header {
+    background-color: #3498DB; /* Blue */
+    color: #ECF0F1; /* Light Gray */
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.badge {
+    background-color: #1ABC9C; /* Teal */
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.exam-title {
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.card-footer {
+    padding: 10px;
+    text-align: center;
+}
+
+.test-button {
+    background-color: #E74C3C; /* Red */
+    color: #ECF0F1; /* Light Gray */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.test-button:hover {
+    background-color: #C0392B; /* Dark Red */
+}

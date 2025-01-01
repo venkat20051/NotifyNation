@@ -1,0 +1,152 @@
+
+
+.search1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: none;
+}
+
+input[type='search'] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+.venkatpani h3{
+    font-size: x-large;
+    color: white;
+    background-color: transparent;
+}
+
+.job-listing {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    border-left: 4px solid #007bff; /* Retained blue border */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Background color transition */
+}
+
+.job-listing:hover {
+    transform: translateY(-3px);
+    background-color: rgba(173, 216, 230, 0.4); /* Light blue background on hover */
+}
+
+/* Job Header */
+.job-header {
+    font-size: 1.4rem;
+    color:var(--rootallButtons); /* Retained blue */
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.job-header i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+    color: #007bff; /* Retained blue for icon */
+}
+
+/* Job Details */
+.job-details {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* Meta Information */
+.job-meta {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.qualification {
+    margin-right: 10px;
+    color: #007bff; /* Retained blue */
+}
+
+.deadline {
+    color: #e74c3c; /* Retained red for deadline */
+}
+
+/* Actions */
+.job-actions {
+    display: flex;
+    justify-content: end;
+}
+
+.job_but {
+    width: fit-content;
+    background-color: var(--rootallButtons); /* Retained blue */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition effects */
+}
+.job_but a{
+    color: white;
+
+    text-decoration: none;
+
+}
+
+.job_but:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Notification Card Styles */
+.notification-card {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.notification-card:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .job-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-header {
+        font-size: 1.2rem;
+    }
+
+    .notification-card {
+        padding: 10px;
+    }
+
+    input[type='search'] {
+        width: 100%;
+    }
+    .search1{
+       width: 90%!important; 
+       border-radius: 5px;
+    }
+    .Headernames{
+        width: 100%; 
+    }
+    .life_side a{
+        text-decoration: none;
+        color: white;
+        padding-left: 10px;
+    }
+}
