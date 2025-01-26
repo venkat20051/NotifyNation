@@ -6,11 +6,18 @@ const Details = require("../Models/Applicationform");
 const SendData = async (req, res) => {
     try {
         const data = req.body;
-        console.log('Data received:', data);
-        const lastEntry = await Details.findOne().sort({ registrationnumber: -1 });
-        const newRegistrationNumber = lastEntry 
-            ? lastEntry.registrationnumber + 1 
-            : 100000000000;
+        // console.log('Data received:', data);
+        // const lastEntry = await Details.findOne().sort({ registrationnumber: -1 });
+        // const newRegistrationNumber = lastEntry 
+        //     ? lastEntry.registrationnumber + 1 
+        //     : 100000000000;
+        let newRegistrationNumber = 0;
+        do {
+            newRegistrationNumber = 0;
+            for (let i = 0; i < 12; i++) {
+                newRegistrationNumber = newRegistrationNumber * 10 + Math.floor(Math.random() * 10);
+            }
+        } while (!Details.find({ registrationnumber: newRegistrationNumber })); 
 
         const newDetails = new Details({
             ...data,

@@ -25,8 +25,8 @@ mongoose.connect("mongodb+srv://sanjaybandaru360:SANJAY@testing.l8sqy.mongodb.ne
     console.log('DB connected successfully...');
 })
 .catch(err => {
-    console.error('MongoDB connection error:', err);
-});
+    console.error('MongoDB connection error:');
+})
 // Routes setup
 app.use("/", FirstRoutes);
 

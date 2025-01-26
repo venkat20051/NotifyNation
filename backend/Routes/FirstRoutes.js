@@ -10,6 +10,7 @@ const Testing = require('../Controllers/SignUPController');
 const Login = require('../Controllers/SigninController');
 const SendingData=require("../Controllers/FormDetails");
 const DashBoard=require("../Controllers/Dashboard");
+const {Verify,SendOtp} = require("../Controllers/otpcheck")
 // Test API Route
 Route.post("/Testing-Api", EntireController.DSP); // Ensure DSP is a function
 
@@ -28,6 +29,8 @@ Route.get('/Subjects-data',Subjects.SendData);
 Route.get('/api/download/:filename', GetPdf.GetPdf);
 Route.post('/get', Testing.Test);
 Route.post('/login', Login.login);
+Route.post('/sendotp',SendOtp);
+Route.post('/verify',Verify);
 // Export the router
 
 // Route.get('/api/download/:filename',EntireController.GetPdf);

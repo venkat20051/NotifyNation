@@ -3,28 +3,22 @@ import axios from 'axios';
 import './SigninPage.css';
 import { Link, useNavigate } from "react-router-dom";
 
-const Login = ({update}) => {
+const Login = ({ update }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
     const handleLogin = async (e) => {
         e.preventDefault();
-
-    
-           axios.post('http://localhost:5000/login', { email, password })
-            .then(res=>{
-                console.log(res.data)
-                const n=res.data
+        axios.post('http://localhost:5000/login', { email, password })
+            .then(res => {
+                // console.log(res.data)
+                const n = res.data
                 update(n)
                 setError('');
-
-                // window.location.href ='/Notification/latestnotification';
                 navigate('/Notification/latestnotification');
-                // window.location('/Notification/latestnotification')
-            }).catch(err=>{
+            }).catch(err => {
                 console.log(err);
-
                 setError('Invalid email or password');
             })
     }
@@ -52,7 +46,7 @@ const Login = ({update}) => {
                     <button type="submit" className="submit-btn">Login</button>
                 </form>
                 <p className="toggle-text">
-                Don't have an account? <span><Link to="/">Sign Up</Link></span>
+                    Don't have an account? <span><Link to="/">Sign Up</Link></span>
                 </p>
             </div>
         </div>

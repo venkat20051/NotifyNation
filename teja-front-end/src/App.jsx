@@ -75,7 +75,7 @@ function App() {
   const update = (n) => {
     var data = n[0];
     setusrdata(n[0]);
-    console.log(JSON.stringify(n))
+    // console.log(JSON.stringify(n))
     localStorage.setItem('usrdata', JSON.stringify(data));
   };
 
@@ -85,7 +85,7 @@ function App() {
       try {
         const parsedData = JSON.parse(savedData);
         setusrdata(parsedData);
-        console.log(parsedData);
+        // console.log(parsedData);
       } catch (e) {
         console.error("Error parsing stored data on load:", e);
       }
