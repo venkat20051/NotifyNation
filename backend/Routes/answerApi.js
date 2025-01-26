@@ -28,7 +28,7 @@ app.post('/validate-answers', (req, res) => {
     //   general_awareness: []
     // };
   
-    // Validate Maths section
+    
     maths.forEach((selectedIndex, questionIndex) => {
       // validationResults.maths.push(selectedIndex === correctAnswers.maths[questionIndex]);
       
