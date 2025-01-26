@@ -7,6 +7,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyparser = require('body-parser');
 const FirstRoutes = require("./Routes/FirstRoutes");
+var dotenv = require("dotenv");
 
 var app = express();
 
@@ -20,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect("mongodb+srv://sanjaybandaru360:SANJAY@testing.l8sqy.mongodb.net/")
+mongoose.connect(process.env.SMTP_link)
 .then((res) => {
     console.log('DB connected successfully...');
 })
