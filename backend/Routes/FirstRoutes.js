@@ -10,7 +10,8 @@ const Testing = require('../Controllers/SignUPController');
 const Login = require('../Controllers/SigninController');
 const SendingData=require("../Controllers/FormDetails");
 const DashBoard=require("../Controllers/Dashboard");
-const {Verify,SendOtp} = require("../Controllers/otpcheck")
+const {Verify,SendOtp} = require("../Controllers/otpcheck");
+const { uploadMiddleware, uploadFile } = require('../Controllers/upload_file');
 // Test API Route
 Route.post("/Testing-Api", EntireController.DSP); // Ensure DSP is a function
 
@@ -43,5 +44,6 @@ Route.post('/candidate',SendingData.GetHallTicketDetails);
 Route.post('/saveUserData',DashBoard.DashBordSaving);
 Route.post('/getUserData/:username',DashBoard.GetingDataByUserName);
 Route.get('/api/getPosts/:username',DashBoard.GetingDataByPosts);
-Route.post('/checkApplication',DashBoard.GettingUserPost)
+Route.post('/checkApplication',DashBoard.GettingUserPost);
+Route.post('/upload-pdf',uploadMiddleware, uploadFile);
 module.exports = Route;

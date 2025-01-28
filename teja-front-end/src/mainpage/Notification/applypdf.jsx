@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import './applypdf.css'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import html2pdf from 'html2pdf.js';
-import { Link } from 'react-router-dom';
-// import html2pdf from 'html2pdf.js';
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
+
 const Applicationpdf = () => {
   const { registrationNumber } = useParams();
-  console.log(registrationNumber)
   const [userData, setUserData] = useState({
     aadhaar: "",
     aadhaarNumber: "",
@@ -74,14 +70,14 @@ const Applicationpdf = () => {
     verifyCandidateName: ""
   });
 
+
   const [error, setError] = useState('');
 
   useEffect(() => {
     axios.get(`http://localhost:5000/getUser/${registrationNumber}`)
       .then(response => {
         setUserData(response.data);
-        console.log(userData);
-        setError(''); // Clear error on successful fetch
+        setError('');
       })
       .catch(error => {
         console.error('Error fetching user:', error);
@@ -91,38 +87,44 @@ const Applicationpdf = () => {
 
   const [loading, setLoading] = useState(false);
 
-const downloadPDF = () => {
-  setLoading(true);
 
-  const element = document.querySelector('.fullForm');
-  const isMobile = window.innerWidth < 768; // Check if the device is mobile
-  const options = {
-    margin: isMobile ? 5 : 10, // Smaller margin for mobile
-    filename: `${registrationNumber}.pdf`,
-    image: { type: 'jpeg', quality: isMobile ? 0.9 : 0.98 }, // Lower quality slightly for mobile
-    html2canvas: {
-      scale: isMobile ? 1.5 : 2, // Lower scale for mobile to avoid oversized rendering
-      scrollX: 0,
-      scrollY: 0,
-      useCORS: true, // Ensure cross-origin images load correctly
-    },
-    jsPDF: {
-      unit: 'mm',
-      format: 'a4',
-      orientation: 'portrait',
-    },
-    pagebreak: { mode: ['avoid-all'] },
-  };
+const downloadPDF = async () => {
+  try {
+    setLoading(true);
 
-  html2pdf()
-    .from(element)
-    .set(options)
-    .save()
-    .finally(() => setLoading(false))
-    .catch(error => {
-      console.error('PDF download error:', error);
-      setLoading(false);
-    });
+    const element = document.querySelector('.fullForm');
+    const options = {
+      margin: 10,
+      filename: `${registrationNumber}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    };
+    const pdfBlob = await html2pdf().from(element).set(options).outputPdf('blob');
+    const formData = new FormData();
+    formData.append('file', pdfBlob, `${registrationNumber}.pdf`);
+    for (let [key, value] of formData.entries()) {
+      console.log(`${key}:`, value);
+    }
+    const mail=userData.emailId;
+   const all =userData
+      const response = await axios.post('http://localhost:5000/upload-pdf',formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+            userData:JSON.stringify(all)
+        },
+      });
+    if(response)
+    {
+      window.alert("Successfully registered and detials ares sent to mail");
+      window.location.href= "/Notification/latestnotification";
+    }
+    console.log('File uploaded successfully:', response.data);
+  } catch (error) {
+    console.error('Error:', error);
+  } finally {
+    setLoading(false);
+  }
 };
 
   return (
@@ -217,24 +219,20 @@ const downloadPDF = () => {
               <thead>
                 <tr>
                   <th>Document Type</th>
-                  {/* <th>Document No</th> */}
                   <th>Document Name</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>Passport Photo</td>
-                  {/* <td>20081188567</td> */}
                   <td>{userData.photo}</td>
                 </tr>
                 <tr>
                   <td>Signature</td>
-                  {/* <td>20081343243</td> */}
                   <td>{userData.signature}</td>
                 </tr>
                 <tr>
                   <td>Id Card</td>
-                  {/* <td>20083444545</td> */}
                   <td>{userData.idCard}</td>
                 </tr>
               </tbody>
@@ -254,7 +252,10 @@ const downloadPDF = () => {
       </div>
       <center>
         <div style={{ margin: "10px",width:"fit-content" }}>
-        <Link to="/Notification/latestnotification">  <button onClick={downloadPDF} disabled={loading}>{loading ? 'Generating PDF...' : 'Download'}</button></Link>
+        {/* <Link to="/Notification/latestnotification">    */}
+        <button onClick={downloadPDF} disabled={loading}>{loading ? 'Registered' : 'Register'}</button> 
+        {/* <button onClick={downloadPDF}>Download</button> */}
+         {/* </Link>  */}
         </div>
       </center>
     </>
