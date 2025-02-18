@@ -1269,9 +1269,10 @@ const Applicationform = ({usrname}) => {
                                 PREVIOUS
                             </button>
                             {index + 1 === totalBoxes ? (
+                                <Link to={`/Applicationpdf/${registrationnumber}`} >
                                 <button className="next5" onClick={chooseTemplate} disabled={submitDisabled}>
-                                    <Link to={`/Applicationpdf/${registrationnumber}`} >Preview</Link>
-                                </button>
+                                    Preview
+                                </button></Link>
                             ) : (
                                 <button className="next3" onClick={nextBox}>
                                     NEXT
