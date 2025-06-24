@@ -46,7 +46,7 @@ const Dash = ({ usrname }) => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await axios.post(`http://localhost:5000/getUserData/${username}`);
+                const response = await axios.post(`/getUserData/${username}`);
                 const data = response.data;
 
                 if (data) {
@@ -90,7 +90,7 @@ const Dash = ({ usrname }) => {
     useEffect(() => {
         const fetchUserPosts = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/getPosts/${username}`);
+                const response = await axios.get(`/api/getPosts/${username}`);
                 console.log(response.data);
                 setUserPosts(response.data);
             } catch (error) {
@@ -109,7 +109,7 @@ const Dash = ({ usrname }) => {
     const handleSavePersonalDetails = async () => {
         const userData = { username, ...personalDetails };
         try {
-            const response = await axios.post("http://localhost:5000/saveUserData", userData);
+            const response = await axios.post("/saveUserData", userData);
             console.log("datasaved");
             window.alert("Personal Details Saved Successfully");
             const data = response.data;
@@ -121,7 +121,7 @@ const Dash = ({ usrname }) => {
     const handleSaveEducationalDetails = async () => {
         const userData = { username, ...educationalDetails };
         try {
-            const result = await axios.post("http://localhost:5000/saveUserData", userData);
+            const result = await axios.post("/saveUserData", userData);
             const data = result.data;
             alert("Educational Details Saved Successfully");
             console.log('Educational Details Saved:', data);
