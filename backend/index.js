@@ -19,6 +19,7 @@
         origin: FRONTEND_URL,
         methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true
+        
     }));
     index.use(bodyparser.json());
     index.use(logger('dev'));
