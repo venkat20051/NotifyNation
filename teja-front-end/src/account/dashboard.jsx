@@ -46,7 +46,7 @@ const Dash = ({ usrname }) => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await axios.post(`/getUserData/${username}`);
+                const response = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND}/getUserData/${username}`);
                 const data = response.data;
 
                 if (data) {
@@ -90,7 +90,7 @@ const Dash = ({ usrname }) => {
     useEffect(() => {
         const fetchUserPosts = async () => {
             try {
-                const response = await axios.get(`/api/getPosts/${username}`);
+                const response = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND}/api/getPosts/${username}`);
                 console.log(response.data);
                 setUserPosts(response.data);
             } catch (error) {
