@@ -4,6 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 // import {}
 
@@ -40,6 +41,7 @@ const Signup = () => {
                 console.log("Response:", response.data);
             }
     }
+    const navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (password.length < 8) {
@@ -66,7 +68,8 @@ const Signup = () => {
                 email,
                 password
             });
-            window.location.href = "/Login";
+            // window.location.href = "/Login";
+            navigate('/Login');
         } catch (err) {
             setError("user already exists");
         }
