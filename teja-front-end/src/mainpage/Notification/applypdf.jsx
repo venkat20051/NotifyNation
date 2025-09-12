@@ -3,6 +3,7 @@ import './applypdf.css'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import html2pdf from 'html2pdf.js';
+import { useNavigate } from 'react-router-dom';
 
 const Applicationpdf = () => {
   const { registrationNumber } = useParams();
@@ -86,6 +87,7 @@ const Applicationpdf = () => {
   }, [registrationNumber]);
 
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
 
 const downloadPDF = async () => {
@@ -117,7 +119,8 @@ const downloadPDF = async () => {
     if(response)
     {
       window.alert("Successfully registered and detials ares sent to mail");
-      window.location.href= "/Notification/latestnotification";
+      // window.location.href= "/Notification/latestnotification";
+      navigate('/Notification/latestnotification');
     }
     console.log('File uploaded successfully:', response.data);
   } catch (error) {
