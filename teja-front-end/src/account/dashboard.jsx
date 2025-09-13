@@ -109,7 +109,7 @@ const Dash = ({ usrname }) => {
     const handleSavePersonalDetails = async () => {
         const userData = { username, ...personalDetails };
         try {
-            const response = await axios.post("/saveUserData", userData);
+            const response = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND}/saveUserData`, userData);
             console.log("datasaved");
             window.alert("Personal Details Saved Successfully");
             const data = response.data;
@@ -121,7 +121,7 @@ const Dash = ({ usrname }) => {
     const handleSaveEducationalDetails = async () => {
         const userData = { username, ...educationalDetails };
         try {
-            const result = await axios.post("/saveUserData", userData);
+            const result = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND}/saveUserData`, userData);
             const data = result.data;
             alert("Educational Details Saved Successfully");
             console.log('Educational Details Saved:', data);
